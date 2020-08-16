@@ -9,51 +9,48 @@
         <div>
           <div class="font-weight-bold">
             ユーザー名
-            <button type="button" class="btn btn-outline-secondary btn-rounded waves-effect btn-sm">PDF Downloaded</button>
+            <form method="post" action="{{ url('pdf_download') }}">
+                @csrf
+                <button type="submit" class="btn btn-outline-secondary btn-rounded waves-effect btn-sm">PDF Downloaded</button>
+            </form>
           </div>
         </div>
       </div>
       <div class="card-body pt-0 pb-2">
           <div class="table-responsive">
-            <table>
+            <table id="tablePreview" class="table table-striped table-bordered">
                 <thead class="mdb-color lighten-5">
                     <tr>
-                        <th>ID</th>
-                        <th>なまえ</th>
+                        <th>日付</th>
                         <th>出勤時間</th>
                         <th>退勤時間</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row"></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th scope="row">mm/dd</th>
+                        <th>hh:mm</th>
+                        <th>hh:mm</th>
                     </tr>
                     <tr>
-                        <th scope="row"></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th scope="row">mm/dd</th>
+                        <th>hh:mm</th>
+                        <th>hh:mm</th>
                     </tr>
                     <tr>
-                        <th scope="row"></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th scope="row">mm/dd</th>
+                        <th>hh:mm</th>
+                        <th>hh:mm</th>
                     </tr>
                     <tr>
-                        <th scope="row"></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th scope="row">mm/dd</th>
+                        <th>hh:mm</th>
+                        <th>hh:mm</th>
                     </tr>
                     <tr>
-                        <th scope="row"></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th scope="row">mm/dd</th>
+                        <th>hh:mm</th>
+                        <th>hh:mm</th>
                     </tr>
                 </tbody>
             </table>
