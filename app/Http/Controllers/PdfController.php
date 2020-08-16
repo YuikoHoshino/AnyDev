@@ -10,7 +10,7 @@ class PdfController extends Controller
         return view('pdf.pdf_index');
     }
 
-    public function pdf_preview(){
+    public function pdf_preview(Request $req){
         $pdf = \PDF::loadHTML('<h1>HELLO</h1>');
         return $pdf->stream();
     }
